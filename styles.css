@@ -1,0 +1,237 @@
+/* styles.css */
+
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+body {
+  font-family: "Noto Sans TC", "Helvetica", "cwTeXYen", sans-serif, Arial,
+    sans-serif;
+  line-height: 2;
+  font-weight: 400;
+  color: #24201e;
+  background-color: #dfd8e0;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 100vh;
+  background-color: #dfd8e0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 15%;
+  /* align-items: center; */
+}
+
+h1,
+h2 {
+  font-weight: 800;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+nav {
+  background-color: #bcb8cfd8;
+}
+
+/* nav ul {
+  list-style: none;
+  padding: 0;
+}
+nav li {
+  display: inline;
+  margin-right: 10px;
+} */
+
+.container {
+  max-width: 90%;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #524a46;
+  cursor: pointer;
+}
+.nav-link.active {
+  color: #24201e; /* 深色 */
+  font-weight: bold; /* 使文字變得更加醒目 */
+}
+
+/* .header h1 {
+  color: #1f1413;
+}
+
+.header p {
+  color: #1f1413;
+}
+
+.job-content h2 {
+  color: #1f1413;
+}
+
+.work-environment h3,
+.detail-box h4,
+.image-box p {
+  color: #1f1413;
+} */
+
+.work-environment {
+  padding: 20px;
+  margin: 7px;
+  /* background-color: #d6d1d6; */
+}
+
+.detailed-work-content {
+  padding: 20px;
+  margin: 7px;
+}
+
+.company-detail-box {
+  /* background-color: #fff; */
+  padding: 20px;
+  /* margin: 7px; */
+  border-radius: 8px;
+  height: 100%;
+}
+
+.image-box img {
+  border-radius: 8px;
+}
+
+/* 待修正 */
+.custom-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  border-left: dashed gray 2px;
+}
+
+.department-detail-box {
+  /* background-color: #fff; */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 100%; /* 使detail-box填滿其父元素的高度 */
+}
+
+.department-detail-box h4,
+p {
+  color: #1f1413;
+}
+
+/* .connections {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 0;
+} */
+
+.row {
+  display: flex;
+  /* justify-content: center; */
+  align-items: stretch; /* 使所有子元素高度一致 */
+}
+
+/* 自定義清單 */
+
+.custom-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: custom-counter; /* 初始化計數器 */
+  position: relative; /* 設置相對定位 */
+}
+
+.custom-list::before {
+  content: "";
+  position: absolute; /* 設置絕對定位 */
+  top: 0;
+  left: 13px; /* 線的位置，根據需要調整 */
+  width: 4px; /* 線的寬度 */
+  height: 100%; /* 線的高度 */
+  background-color: #6b6b80;
+}
+
+.custom-list li {
+  position: relative;
+  padding-left: 40px;
+  counter-increment: custom-counter; /* 計數器遞增 */
+  margin-bottom: 40px; /* 增加間距以顯示貫穿線 */
+}
+
+.custom-list li::before {
+  content: counter(custom-counter); /* 插入計數器的值 */
+  position: absolute; /* 絕對定位 */
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  background-color: #6b6b80;
+  color: #e9e8eb;
+  font-size: 20px;
+  border-radius: 8px;
+  display: flex; /* 使用flexbox對齊內容 */
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+}
+
+/* 學習 */
+
+.skill-col {
+  height: 100%;
+}
+
+.skill-box {
+  background-color: #d1d2d6;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skill-box-title {
+  padding-top: 20px;
+  padding-left: 15px;
+}
+
+.skill-box-text {
+  padding-left: 15px;
+  padding-right: 15px;
+  /* padding: 10px; */
+  /* height: auto; */
+}
+
+.non-skill-col {
+  height: 100%;
+}
+
+.non-skill-box {
+  background-color: #d6d1d1;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.non-skill-box-title {
+  padding-top: 20px;
+  padding-left: 15px;
+}
+
+.non-skill-box-text {
+  padding-left: 15px;
+  padding-right: 15px;
+  /* padding: 10px; */
+  /* height: auto; */
+}
